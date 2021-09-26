@@ -1,0 +1,192 @@
+Skenario Unit Test:
+1. HomeViewModelTest
+	Memastikan data movie dan tv shows yang dikembalikan tidak null
+	Memstikan apakah jumlah data movie dan tv shows pada recyclerview sama dengan data dummy
+	Memastikan observer berjalan sesuai yang diharapkan
+	Memastikan fitur earch berjalan sesuai yang diharapkan
+2. DetailViewModelTest
+	Memastikan nama movie dan/atau nama tv shows yang dipilih tersimpan
+	Memastikan nama movie dan/atau nama tv shows yang dipilih tidak null
+	Memastikan data poster movie dan/atau tv shows yang dipilih sesuai dengan yang diharapkan
+	Memastikan data judul movie dan/atau tv shows yang dipilih sesuai dengan yang diharapkan
+	Memastikan data overview / deskripsi movie dan/atau tv shows yang dipilih sesuai dengan yang diharapkan
+	Memastikan data tanggal movie dan/atau tv shows yang dipilih sesuai dengan yang diharapkan
+	Memastikan data genre movie dan/atau tv shows yang dipilih sesuai dengan yang diharapkan
+	Memastikan data durasi movie dan/atau tv shows yang dipilih sesuai dengan yang diharapkan
+	Memastikan observer berjalan sesuai yang diharapkan
+	Memastikan dapat melakukan set favorite pada sebuah data movie/tv show yang dipilih
+	Memastikan dapat melakukan delete favorite pada sebuah data movie/tv show yang dipilih
+3. FavoriteViewModelTest
+	Memastikan data favorite movie dan tv shows yang dikembalikan tidak null
+	Memstikan apakah jumlah data favorite movie dan tv shows pada recyclerview sama dengan data dummy
+	Memastikan observer berjalan sesuai yang diharapkan
+
+Test Case
+1. Memastikan data movie yang kosong
+1. Memastikan data movie tidak dapat ditampilkan
+3. Memastikan jika ada data tanggal yang salah format
+5. Memastikan jika data Selected Movie bernilai null dan telah di perkirakan
+
+RepositoryTest
+1. testGetFilm 
+	Memastikan data movies yang didapat tidak null
+	Memastikan jumlah data movies yang diterima sesuai ekspektasi
+2. testGetTvShows 
+	Memastikan data tv shows yang didapat tidak null
+	Memastikan jumlah data tv shows yang diterima sesuai ekspektasi
+3. testGetSelectedMovie
+	Memastikan data movie yang didapat tidak null
+	Memastikan data id movie yang dipilih diterima sesuai ekspektasi
+	Memastikan data judul movie yang dipilih diterima sesuai ekspektasi
+	Memastikan data durasi movie yang dipilih diterima sesuai ekspektasi
+	Memastikan data deskripsi movie yang dipilih diterima sesuai ekspektasi
+	Memastikan data genre movie yang dipilih diterima sesuai ekspektasi
+	Memastikan data tanggal movie yang dipilih diterima sesuai ekspektasi
+4. testGetSelectedTvShow
+	Memastikan data tv show yang didapat tidak null
+	Memastikan data id tv show yang dipilih diterima sesuai ekspektasi
+	Memastikan data judul tv show yang dipilih diterima sesuai ekspektasi
+	Memastikan data durasi tv show yang dipilih diterima sesuai ekspektasi
+	Memastikan data deskripsi tv show yang dipilih diterima sesuai ekspektasi
+	Memastikan data genre tv show yang dipilih diterima sesuai ekspektasi
+	Memastikan data tanggal tv show yang dipilih diterima sesuai ekspektasi
+	Memastikan data episode tv show yang dipilih diterima sesuai ekspektasi
+	Memastikan data seasons tv show yang dipilih diterima sesuai ekspektasi
+5. testGetAllFavoriteMovie
+	Memastikan data movies yang didapat tidak null
+	Memastikan jumlah data movies yang diterima sesuai ekspektasi
+6. testGetAllFavoriteShow
+	Memastikan data tv shows yang didapat tidak null
+	Memastikan jumlah data tv shows yang diterima sesuai ekspektasi
+7. testSetFavoriteMovie
+	Memastikan dapat melakukan set favorite pada sebuah data movie
+8. testSetFavoriteShow
+	Memastikan dapat melakukan set favorite pada sebuah data tv show
+9. testDeleteFavoriteMovie
+	Memastikan dapat melakukan delete favorite pada sebuah data movie
+10. testDeleteFavoriteShow
+	Memastikan dapat melakukan delete favorite pada sebuah data tv show
+11. testSearhcMovies
+	Memastikan dapat melakukan search pada data movie
+12. testSearhcShows
+	Memastikan dapat melakukan search pada data tv show
+ 
+Skenario Instrumental test:
+1. Menampilkan data movie 
+	Memastikan rv_home telah ditampilkan
+	Melakukan scroll rv_home ke posisi data yang paling akhir
+
+2. Menampilkan data tv shows
+	Memastikan rv_home telah ditampilkan
+	Melakukan klik TabLayout yang memiliki tulisan "TV SHOWS"
+	Melakukan scroll rv_home ke posisi data yang paling akhir
+
+3. Menampilkan detail salah satu data movie
+	Memastikan rv_home ditampilkan
+	Melakukan klik pada data pertama di rv_home
+
+	Memastikan bahwa Image poster movie telah ditampilkan
+	Memastikan bahwa Text View judul movie telah ditampilkan
+	Memastikan bahwa Text View tanggal telah ditampilkan
+	Memastikan bahwa Text View tahun movie telah ditampilkan
+	Memastikan bahwa Text View konten overview movie telah ditampilkan
+	Memastikan bahwa Image simbol durasi telah ditampilkan	
+	Memastikan bahwa Text View durasi movie telah ditampilkan
+	Memastikan bahwa Text View genre movie telah ditampilkan
+
+4. Menampilkan detail salah satu data tv shows
+	Memastikan rv_home ditampilkan
+	Melakukan klik TabLayout yang memiliki tulisan "TV SHOWS"	
+	Melakukan klik pada data pertama di rv_home
+
+	Memastikan bahwa Image poster tv shows telah ditampilkan
+	Memastikan bahwa Text View judul tv shows telah ditampilkan
+	Memastikan bahwa Text View tanggal telah ditampilkan
+	Memastikan bahwa Text View tahun tv shows telah ditampilkan
+	Memastikan bahwa Text View konten overview tv shows telah ditampilkan
+	Memastikan bahwa Image simbol durasi telah ditampilkan	
+	Memastikan bahwa Text View durasi tv shows telah ditampilkan
+	Memastikan bahwa Text View genre tv shows telah ditampilkan
+
+5. Melakukan share salah satu data movie
+	Memastikan rv_home ditampilkan
+	Melakukan klik pada data pertama di rv_home
+	Melakukan scroll hingga tombol share terlihat
+	Melakukan klik pada tombol share pada halaman detail
+
+6. Melakukan share salah satu data film
+	Memastikan rv_home ditampilkan
+	Melakukan klik TabLayout yang memiliki tulisan "TV SHOWS"
+	Melakukan klik pada data pertama di rv_home
+	Melakukan scroll hingga tombol share terlihat
+	Melakukan klik pada tombol share pada halaman detail
+
+7. Melakukan add favorite salah satu data movie
+	Memastikan rv_home ditampilkan
+	Melakukan klik pada data pertama di rv_home
+	Melakukan klik pada tombol favorite pada halaman detail
+	Memanggil fungsi tes loadAllFavoriteMoviesNotEmpty
+	Memanggil fungsi tes loadFavoriteDetailMovie
+	Memanggil fungsi tes deleteFavoriteMovie
+
+8. Melakukan add favorite salah satu data film
+	Memastikan rv_home ditampilkan
+	Melakukan klik TabLayout yang memiliki tulisan "TV SHOWS"
+	Melakukan klik pada data pertama di rv_home
+	Melakukan klik pada tombol favorite pada halaman detail
+	Memanggil fungsi tes loadAllFavoriteTvShowsNotEmpty
+	Memanggil fungsi tes loadFavoriteDetailTvShows
+	Memanggil fungsi tes deleteFavoriteTvShow
+
+9. Menampilkan data favorite movie 
+	Melakukan klik tombol kembali
+
+	Memastikan tombol menuju halaman favorite ditampilkan
+	Melakukan klik pada tombol untuk menuju ke halaman favorite
+	Memastikan rv_favorite ditampilkan
+	Melakukan scroll rv_favorite
+
+10. Menampilkan data favorite tv shows
+	Melakukan klik tombol kembali
+	Memastikan tombol menuju halaman favorite ditampilkan
+	Melakukan klik pada tombol untuk menuju ke halaman favorite
+	Melakukan klik TabLayout yang memiliki tulisan "TV SHOWS"
+	Memastikan rv_favorite telah ditampilkan
+	Melakukan scroll rv_favorite 
+
+11. Menampilkan detail salah satu data favorite movie
+	Memastikan rv_favorite ditampilkan
+	Melakukan klik pada data pertama di rv_favorite
+
+	Memastikan bahwa Image poster movie telah ditampilkan
+	Memastikan bahwa Text View judul movie telah ditampilkan
+	Memastikan bahwa Text View tanggal telah ditampilkan
+	Memastikan bahwa Text View tahun movie telah ditampilkan
+	Memastikan bahwa Text View konten overview movie telah ditampilkan
+	Memastikan bahwa Image simbol durasi telah ditampilkan	
+	Memastikan bahwa Text View durasi movie telah ditampilkan
+	Memastikan bahwa Text View genre movie telah ditampilkan
+
+12. Menampilkan detail salah satu data favorite tv shows
+	Melakukan klik TabLayout yang memiliki tulisan "TV SHOWS"
+	Memastikan rv_favorite ditampilkan
+	Melakukan klik pada data pertama di rv_favorite
+
+	Memastikan bahwa Image poster tv shows telah ditampilkan
+	Memastikan bahwa Text View judul tv shows telah ditampilkan
+	Memastikan bahwa Text View tanggal telah ditampilkan
+	Memastikan bahwa Text View tahun tv shows telah ditampilkan
+	Memastikan bahwa Text View konten overview tv shows telah ditampilkan
+	Memastikan bahwa Image simbol durasi telah ditampilkan	
+	Memastikan bahwa Text View durasi tv shows telah ditampilkan
+	Memastikan bahwa Text View genre tv shows telah ditampilkan
+
+13. Menghapus data favorite movie 
+	Melakukan scroll hingga tombol favorite terlihat
+	Melakukan klik pada tombol favorite pada halaman detail
+
+14. Menghapus data favorite tv shows
+	Melakukan scroll hingga tombol favorite terlihat
+	Melakukan klik pada tombol favorite pada halaman detail
+
+
